@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    <link href="css/style.css" rel="stylesheet">-->
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .wrapper {
+            max-width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            width: 1170px;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 13px;
+            align-items: flex-end;
+            /*background-color: #f6f6f6;*/
+        }
+
+        /*logo__wrapper  */
+
+        .logo__wrapper {
+            display: flex;
+            width: 153px;
+            height: 108px;
+            margin-right: 18px;
+        }
+
+
+        /*end logo__wrapper  */
+
+
+        .navigation__main {
+            /* Style for "Rectangle" */
+            width: 1170px;
+            height: 71px;
+            background-color: #05aecc;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .navigation__main_ul {
+            /* Style for "Art" */
+            width: 936px;
+            height: 15px;
+            color: #ffffff;
+            font-family: Lato, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            /*color: #ef5966;*/
+            letter-spacing: 1.44px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 30px 0 26px;
+            margin: 0 auto;
+        }
+
+        .navigation__main_ul li a {
+            position: relative;
+        }
+
+        .navigation__main_ul li a:hover {
+            opacity: 0.8;
+        }
+
+
+
+        .header__content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .navigation__link {
+            color: #0E1D28;
+        }
+
+        .navigation__ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        /* header__navigation  */
+
+        .header__navigation {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            /*height: 15px;*/
+            color: #434343;
+        }
+
+        .header__navigation ul {
+            width: 520px;
+            margin: 11px 0 8px;
+        }
+
+        .header__navigation ul li {
+            margin-right: 27px;
+        }
+
+        .header__navigation ul li:last-child {
+            margin-right: 0;
+        }
+
+        .header__navigation ul li a {
+            color: #434343;
+            font-family: Lato, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 1.4px;
+        }
+
+        .header__navigation ul li a:hover {
+            opacity: 0.8;
+        }
+
+
+        /* end header__navigation  */
+
+        /*  header__form  */
+        .header__form {
+            /*width: 980px;*/
+            height: 91px;
+            background-color: #f6f6f6;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .header__form_item {
+            height: 89px;
+            margin: 1px 0;
+            background-color: #05aecc;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-right: 5px;
+            width: 116px;
+        }
+
+        .header__form_item:nth-child(3),
+        .header__form_item:nth-child(4) {
+            width: 142px;
+        }
+
+        .header__form_item a {
+            padding: 0 15px 0;
+        }
+
+
+        .header__form_item img {
+            width: 27px;
+
+        }
+
+        .header__form_item:last-child {
+            margin: 0;
+        }
+
+        .header__form_item a {
+            color: #ffffff;
+            font-family: Lato, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .header__form_item a:hover {
+            opacity: 0.8;
+        }
+
+        .header__form_item-red {
+            background-color: #f0626e;
+        }
+
+
+        /*navigation__submenu*/
+
+        .navigation__main_item {
+            position: relative;
+        }
+
+        .submenu {
+            width: 263px;
+            height: 388px;
+            box-shadow: 0 0 16px rgba(0, 0, 0, 0.33);
+            background-color: #ffffff;
+            opacity: 0.9;
+            display: flex;
+            /*display: none;*/
+            flex-direction: column;
+            margin: 0 auto;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            padding-top: 25px;
+        }
+
+        .submenu img {
+            width: 72px;
+            height: 76px;
+            margin-right: 12px;
+
+        }
+
+        .submenu__item {
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1px solid grey;
+            width: 226px;
+            height: 95px;
+            margin: 0 auto;
+        }
+
+        .submenu__content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .submenu__content h4 {
+            color: #ef5966;
+            font-size: 16px;
+            margin-bottom: 9px;
+        }
+
+        .submenu__content p  {
+            color: #454545;
+            font-size: 14px;
+            letter-spacing: 0;
+            margin-bottom: 6px;
+        }
+
+        .submenu__content a {
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14px;
+            background-color: #05aecc;
+            padding: 7px 26px;
+        }
+
+
+        /*end navigation__submenu*/
+
+        a:hover {
+            color: #ef5966;
+        }
+
+        /*  section-who-we-are */
+
+        .section-who-we-are {
+            display: flex;
+            flex-direction: column;
+            width: 1170px;
+            margin: 0 auto;
+        }
+
+        .section-who-we-are h2 {
+            color: #05aecc;
+            font-family: Lato, sans-serif;
+            font-size: 30px;
+            border-bottom: 1px solid grey;
+        }
+
+        .section-who-we-are__article {
+            /* Style for "Lorem Ipsu" */
+            width: 1116px;
+            height: 93px;
+            color: #464646;
+            font-family: Lato, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+            margin: 46px 0 39px;
+        }
+
+        .section-who-we-are__item {
+            width: 370px;
+            height: 232px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .section-who-we-are__item a {
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 30px;
+            margin-left: 26px;
+        }
+
+
+        .section-who-we-are__item:first-child {
+            background-color: #434343;
+        }
+
+        .section-who-we-are__item:nth-child(2) {
+            background-color: #05aecc;
+        }
+
+        .section-who-we-are__item:nth-child(3) {
+            background-color: #f0626e;
+        }
+
+        .section-who-we-are__listing {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 31px;
+        }
+
+        .section-who-we-are__link {
+            padding: 18px 242px 18px;
+            width: 163px;
+            background-color: #05aecc;
+            color: #ffffff;
+            font-family: Lato, sans-serif;
+            font-size: 26px;
+            font-weight: 400;
+            line-height: 23.58px;
+        }
+
+        /*section-links*/
+        .section-links {
+            color: #676767;
+            width: 1170px;
+            margin: 0 auto;
+        }
+
+        .section-links__ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 100%;
+        }
+
+        .section-links h3 {
+            font-size: 30px;
+        }
+
+
+        .section-links a {
+            color: #676767;
+            height: 321px;
+            font-family: Lato, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 30px;
+            /* Text style for "," */
+        }
+
+        /*footer*/
+
+        .footer {
+            /* Style for "Copyright" */
+            width: 284px;
+            height: 12px;
+            color: #434343;
+            font-family: Lato, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+
+    <header class="header">
+        <!--logo-->
+        <div class="logo__wrapper">
+            <a href="">
+                <img class="logo" src="img/logo.png" alt="логотип">
+            </a>
+        </div>
+        <!--end logo-->
+
+        <div class="header__content">
+            <!--nav first-->
+            <nav class="navigation header__navigation">
+                <ul class="navigation__ul">
+                    <li><a class=" " href="#">Sell</a></li>
+                    <li><a class="navigation__link" href="#">Registry</a></li>
+                    <li><a class="navigation__link" href="#">Community</a></li>
+                    <li><a class="navigation__link" href="#">Blogs</a></li>
+                    <li><a class="navigation__link" href="#">Mobile</a></li>
+                    <li><a class="navigation__link" href="#">Gift Cards</a></li>
+                </ul>
+            </nav>
+            <!--end nav first-->
+
+            <!--heder-nav main-->
+            <nav class="navigation header__form">
+                <ul class="navigation__ul">
+                    <li class="header__form_item"><a class="navigation__link" href="#">Register</a></li>
+                    <li class="header__form_item header__form_item-red"><a class="navigation__link"
+                                                                           href="#">Sign in</a></li>
+                    <li class="header__form_item"><a class="navigation__link" href="#">Whislost</a>
+                        <img src="img/whislost.png" alt=""></li>
+                    <li class="header__form_item header__form_item-red"><a class="navigation__link"
+                                                                           href="#">Cart</a>
+                        <img src="img/cart.png" alt=""></li>
+                </ul>
+            </nav>
+            <!--end heder-nav main-->
+
+        </div>
+    </header>
+
+    <!-- nav main-->
+    <nav class="navigation navigation__main">
+        <ul class="navigation__main_ul">
+            <li><a href="">Art</a></li>
+            <li class="navigation__main_item">
+                <a href="">Home & Living</a>
+                <ul class="submenu">
+
+                    <li class="submenu__item">
+                        <img src="img/nav_item_logo.png" alt="">
+
+                        <div class="submenu__content">
+                            <h4>Item Name Here</h4>
+                            <p>Lorem Ipsum is simply
+                                dummy text of the</p>
+                            <a href="">More Detail</a>
+                        </div>
+                    </li>
+
+
+                </ul>
+
+            </li>
+            <li><a href="">Jewelry</a></li>
+            <li><a href="">Women </a></li>
+            <li><a href=""> Men </a></li>
+            <li><a href="">Kids</a></li>
+            <li><a href="">Vintage</a></li>
+            <li><a href="">Weddings </a></li>
+            <li><a href=""> More</a></li>
+        </ul>
+
+
+    </nav>
+    <!--end nav main-->
+
+
+    <section class="section-who-we-are">
+        <h2 class="section-who-we-are__h2">Who We Are</h2>
+        <article class="section-who-we-are__article">Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+        </article>
+
+        <div class="section-who-we-are__listing">
+
+            <div class="section-who-we-are__item">
+                <img src="img/who-we-are__one.png" alt="">
+                <a href="#">Chose<br>Products</a>
+            </div>
+
+            <div class="section-who-we-are__item">
+                <img src="img/who-we-are__two.png" alt="">
+                <a href="#">Register<br>Login</a>
+            </div>
+
+            <div class="section-who-we-are__item">
+                <img src="img/who-we-are__three.png" alt="">
+                <a href="#">Checkout</a>
+            </div>
+
+        </div>
+
+
+        <a class="section-who-we-are__link" href="">Register Now</a>
+
+
+    </section>
+
+
+    <section class="section-links">
+
+        <ul class="section-links__ul">
+
+            <li>
+
+                <h3>shopping with us</h3>
+                <ul>
+                    <li><a href=""> why shop with us?</a></li>
+                    <li><a href=""> how it works</a></li>
+                    <li><a href="">delivery</a></li>
+                    <li><a href="">returns</a></li>
+                    <li><a href="">where's my order</a></li>
+                    <li><a href="">contact & help</a></li>
+                    <li><a href=""> wedding list</a></li>
+                    <li><a href="">wish lists</a></li>
+                    <li><a href="">gift vouchers</a></li>
+                </ul>
+            </li>
+
+            <li>
+
+                <h3>about us</h3>
+                <ul>
+                    <li><a href=""> our story</a></li>
+                    <li><a href=""> customer contact</a></li>
+                    <li><a href=""> awards</a></li>
+                    <li><a href=""> press centre</a></li>
+                    <li><a href=""> work with us</a></li>
+                    <li><a href=""> terms & conditions</a></li>
+                    <li><a href=""> privacy & cookies</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <h3> selling with us</h3>
+                <ul>
+                    <li><a href=""> why join?</a></li>
+                    <li><a href=""> faqs</a></li>
+                    <li><a href=""> apply to sell with us</a></li>
+                    <li><a href=""> affiliates</a></li>
+                </ul>
+            </li>
+
+            <li>
+
+                <div>
+                    <h3>Signup newsletter</h3>
+                    <form action=""></form>
+                </div>
+
+                <div>
+                    <h3>Keep in touch</h3>
+                    <ul>
+                        <li class=""><a href=""><i></i></a></li>
+                        <li><a href=""><i></i></a></li>
+                        <li><a href=""><i></i></a></li>
+                        <li><a href=""><i></i></a></li>
+                        <li><a href=""><i></i></a></li>
+                    </ul>
+                </div>
+
+
+            </li>
+
+
+        </ul>
+        <ul>
+            <li>
+
+            </li>
+
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+
+
+    <footer class="footer">
+
+        <address class="address">
+            Copyright © 2014 Gift Shop,  All right reserved
+        </address>
+
+        <p class="copywrite">
+            Designed by <span>Amysxain</span>
+        </p>
+
+    </footer>
+
+</div>
+</body>
+</html>
