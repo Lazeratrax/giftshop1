@@ -37,7 +37,7 @@
             display: flex;
             width: 153px;
             height: 108px;
-            margin-right: 18px;
+            margin: 18px 18px 0;
         }
 
 
@@ -54,7 +54,7 @@
             margin-bottom: 15px;
         }
 
-        .navigation__main_ul {
+        .navigation__main-ul {
             /* Style for "Art" */
             width: 936px;
             height: 15px;
@@ -72,15 +72,17 @@
             margin: 0 auto;
         }
 
-        .navigation__main_ul li a {
+        .navigation__main-ul  li a {
             position: relative;
         }
 
-        .navigation__main_ul li a:hover {
+        .navigation__main-ul  li a:hover {
             opacity: 0.8;
         }
 
-
+        .navigation__main-link {
+            z-index: 22;
+        }
 
         .header__content {
             display: flex;
@@ -210,17 +212,27 @@
             /*display: none;*/
             flex-direction: column;
             margin: 0 auto;
+            /*position: absolute;*/
+            top: 50px;
+            left: -22px;
+            padding-top: 20px;
             position: absolute;
-            top: 40px;
-            left: 0;
-            padding-top: 25px;
         }
 
         .submenu img {
             width: 72px;
             height: 76px;
-            margin-right: 12px;
+            margin-right: 13px;
+        }
 
+        .submenu::before {
+            content:'';
+            position: absolute;
+            top: -80px;
+            left: 0;
+            width: 166px;
+            height: 71px;
+            background-color: #ffffff;
         }
 
         .submenu__item {
@@ -235,19 +247,22 @@
         .submenu__content {
             display: flex;
             flex-direction: column;
+            text-align: left;
+            justify-content: flex-start;
+            align-items: flex-start;
         }
 
         .submenu__content h4 {
             color: #ef5966;
             font-size: 16px;
-            margin-bottom: 9px;
+            margin-bottom: 8px;
         }
 
         .submenu__content p  {
             color: #454545;
             font-size: 14px;
             letter-spacing: 0;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .submenu__content a {
@@ -256,9 +271,8 @@
             font-weight: 400;
             line-height: 14px;
             background-color: #05aecc;
-            padding: 7px 26px;
+            padding: 4px 17px;
         }
-
 
         /*end navigation__submenu*/
 
@@ -392,7 +406,7 @@
 </head>
 <body>
 <div class="wrapper">
-
+<!--header-->
     <header class="header">
         <!--logo-->
         <div class="logo__wrapper">
@@ -436,12 +450,13 @@
 
     <!-- nav main-->
     <nav class="navigation navigation__main">
-        <ul class="navigation__main_ul">
-            <li><a href="">Art</a></li>
+        <ul class="navigation__main-ul">
+            <li><a class="navigation__main-link" href="">Art</a></li>
             <li class="navigation__main_item">
-                <a href="">Home & Living</a>
-                <ul class="submenu">
+                <a class="navigation__main-link" href="">Home & Living</a>
 
+                <!--submenu-->
+                <ul class="submenu">
                     <li class="submenu__item">
                         <img src="img/nav_item_logo.png" alt="">
 
@@ -452,18 +467,17 @@
                             <a href="">More Detail</a>
                         </div>
                     </li>
-
-
                 </ul>
+                <!--end submenu-->
 
             </li>
-            <li><a href="">Jewelry</a></li>
-            <li><a href="">Women </a></li>
-            <li><a href=""> Men </a></li>
-            <li><a href="">Kids</a></li>
-            <li><a href="">Vintage</a></li>
-            <li><a href="">Weddings </a></li>
-            <li><a href=""> More</a></li>
+            <li><a class="navigation__main-link" href="">Jewelry</a></li>
+            <li><a class="navigation__main-link" href="">Women </a></li>
+            <li><a class="navigation__main-link" href=""> Men </a></li>
+            <li><a class="navigation__main-link" href="">Kids</a></li>
+            <li><a class="navigation__main-link" href="">Vintage</a></li>
+            <li><a class="navigation__main-link" href="">Weddings </a></li>
+            <li><a class="navigation__main-link" href=""> More</a></li>
         </ul>
 
 
